@@ -31,10 +31,10 @@ class ViewController: UIViewController {
         let ballAnswerSelect:Int = Int.random(in: 0...4)
         ballAnswerLabel.text = ballAnswersArray[ballAnswerSelect]
         
-        var disableMyButton = sender as UIButton
+        let disableMyButton = sender as UIButton
         disableMyButton.isEnabled = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.3) {
             self.ballAnswerLabel.text = "Another question?"
             print("tic")
             disableMyButton.isEnabled = true
